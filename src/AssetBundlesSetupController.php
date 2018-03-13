@@ -9,13 +9,13 @@ use Symfony\Component\Process\Process;
 use yii\base\InvalidArgumentException;
 
 /**
- * Craft CMS setup installer (extended by setup/update command).
+ * Craft CMS setup installer (+ setup/asset-bundles action).
  */
 class AssetBundlesSetupController extends SetupController
 {
 
     /**
-     * AssetBundles
+     * Publishes asset bundles
      */
     public function actionAssetBundles()
     {
