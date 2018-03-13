@@ -19,17 +19,11 @@ class AssetBundlesSetupController extends SetupController
      */
     public function actionAssetBundles()
     {
-        // Make 'web' aliases available in console
-        \Yii::setAlias('@webroot', CRAFT_BASE_PATH . '/web');
-        \Yii::setAlias('@web', '');
+        // Prepare for console
+        $this->adjustAliases();
 
-        // Make sure config.general.resourceBasePath (@webroot/cpresources) exist
-        $basePath = Craft::getAlias(Craft::$app->getConfig()->getGeneral()->resourceBasePath);
-        if (!is_dir($basePath)) {
-            if (FileHelper::createDirectory($basePath)) {
-                echo PHP_EOL . $basePath . ' created' . PHP_EOL;
-            }
-        }
+        // Make @webroot/cpresources) exist
+        $this->createBasePath();
 
         // Register aliases for disabled plugins as well
         foreach (\Craft::$app->getPlugins()->getAllPluginInfo() as $plugin) {
@@ -40,7 +34,7 @@ class AssetBundlesSetupController extends SetupController
             }
         }
 
-        $warnings  = [];
+        $warnings       = [];
         $composerLoader = require \Craft::getAlias('@vendor/autoload.php');
 
         foreach (array_keys($composerLoader->getClassMap()) as $class) {
@@ -77,4 +71,29 @@ class AssetBundlesSetupController extends SetupController
 
     }
 
+
+    protected function adjustAliases()
+    {
+        // Make 'web' aliases available in console
+        Craft::setAlias('@webroot', CRAFT_BASE_PATH . '/web');
+        Craft::setAlias('@web', '');
+
+        // Override where Yii should find its asset deps
+        $libPath = Craft::getAlias('@lib');
+        Craft::setAlias('@bower/bootstrap/dist', $libPath . '/bootstrap');
+        Craft::setAlias('@bower/jquery/dist', $libPath . '/jquery');
+        Craft::setAlias('@bower/inputmask/dist', $libPath . '/inputmask');
+        Craft::setAlias('@bower/punycode', $libPath . '/punycode');
+        Craft::setAlias('@bower/yii2-pjax', $libPath . '/yii2-pjax');
+    }
+
+    protected function createBasePath()
+    {
+        $basePath = Craft::getAlias(Craft::$app->getConfig()->getGeneral()->resourceBasePath);
+        if (!is_dir($basePath)) {
+            if (FileHelper::createDirectory($basePath)) {
+                echo PHP_EOL . $basePath . ' created' . PHP_EOL;
+            }
+        }
+    }
 }
