@@ -1,10 +1,10 @@
 # AssetBundler plugin for Craft CMS 3.x
 
-The plugin provides a console command to publish web/cpresources. This is useful in "cloud environments" like [fortrabbit's Professional Stack](https://www.fortrabbit.com/pricing-pro) or on Heroku.
+The plugin provides a console command to publish web/cpresources. This is useful in "cloud environments" like [fortrabbit's Professional Stack](https://www.fortrabbit.com/pricing-pro) or when using multiple Dynos on Heroku.
 
 The purpose of this command is to publish AssetBundles files in a publicly accessible `/web` directory.
 This happens already on-the-fly, e.g when you access Craft's control panel in the browser the first time. 
-However in load balanced environments, it happens that files do not exist on all servers after you deployed.
+However, in load balanced environments, it happens that files do not exist on all servers after you deployed.
 
 
 # Usage
@@ -30,7 +30,7 @@ All `AssetBundle` classes that exist in the composer autoload class map get regi
 # Edge cases
 
 The `craft\web\AssetManager::getPublishedUrl()` method allows to publish single files that are not part of an `AssetBundle`.
-As the plugin is not aware of these files you may need to add them to a bundle.
+As the plugin is not aware of these files, you may need to add them to a bundle.
 
 
 # TODOs
