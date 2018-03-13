@@ -75,7 +75,6 @@ class AssetBundlesSetupController extends SetupController
 
         return (count(\Craft::$app->getView()->assetBundles)) ? 0 : 1;
 
-
     }
 
 }
