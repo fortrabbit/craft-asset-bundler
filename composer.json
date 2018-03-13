@@ -1,0 +1,40 @@
+{
+    "name": "fortrabbit/craft-asset-bundler",
+    "description": "Provides a console command to publish web/cpresources",
+    "type": "craft-plugin",
+    "version": "0.1.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "cpresource",
+        "asset-bundle"
+    ],
+    "support": {
+        "docs": "https://github.com/fortrabbit/craft-asset-bundler/blob/master/README.md",
+        "issues": "https://github.com/fortrabbit/craft-asset-bundler/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oliver Stark",
+            "homepage": "http://www.fortrabbit.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "fortrabbit\\AssetBundler\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "AssetBundler",
+        "handle": "asset-bundler",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/fortrabbit/craft-asset-bundler/master/CHANGELOG.md"
+    }
+}
