@@ -1,0 +1,677 @@
+cpresources
+├── 016a4edfe03d2d869433f50aa5c5f39f
+│   ├── EntryDraftEditor.js
+│   ├── EntryDraftEditor.min.js
+│   ├── EntryDraftEditor.min.js.map
+│   ├── EntryTypeSwitcher.js
+│   ├── EntryTypeSwitcher.min.js
+│   ├── EntryTypeSwitcher.min.js.map
+│   ├── entry.css
+│   ├── entry.css.map
+│   └── entry.scss
+├── 0567971a470820b15f2d1ad13de26219
+│   ├── MatrixConfigurator.js
+│   ├── MatrixConfigurator.min.js
+│   └── MatrixConfigurator.min.js.map
+├── 0d9a02a256849ebc70a38d7673cfad78
+│   ├── AssetIndexesUtility.js
+│   ├── AssetIndexesUtility.min.js
+│   └── AssetIndexesUtility.min.js.map
+├── 16af4f8ffec857cb76d7a5e63a1a43e2
+│   ├── ClearCachesUtility.js
+│   ├── ClearCachesUtility.min.js
+│   └── ClearCachesUtility.min.js.map
+├── 16b9e381b450056754ad3ed510adcef0
+│   ├── jquery.js
+│   └── jquery.js.map
+├── 18765e874302e96d2ef126497455f95f
+│   ├── rebrand.css
+│   ├── rebrand.css.map
+│   ├── rebrand.js
+│   ├── rebrand.min.js
+│   ├── rebrand.min.js.map
+│   └── rebrand.scss
+├── 19cb2df6b7b744395ced73dbec1e4266
+│   ├── lang
+│   │   ├── ar.js
+│   │   ├── de.js
+│   │   ├── es.js
+│   │   ├── fr.js
+│   │   ├── he.js
+│   │   ├── hu.js
+│   │   ├── it.js
+│   │   ├── ja.js
+│   │   ├── ko.js
+│   │   ├── nl.js
+│   │   ├── pl.js
+│   │   ├── pt.js
+│   │   ├── ru.js
+│   │   ├── sv.js
+│   │   ├── tr.js
+│   │   └── zh.js
+│   ├── redactor-font.eot
+│   ├── redactor.css
+│   ├── redactor.js
+│   ├── redactor.min.css
+│   ├── redactor.min.js
+│   └── redactor.min.js.map
+├── 1d559eae3dd77a0d4d940ba388771999
+│   ├── utilities.css
+│   ├── utilities.css.map
+│   └── utilities.scss
+├── 1dcfc0d81d04cccdb8f5b68a5b3df37c
+│   ├── css
+│   │   ├── RedactorInput.min.css
+│   │   └── RedactorInput.scss
+│   └── js
+│       ├── RedactorInput.js
+│       ├── RedactorInput.min.js
+│       └── RedactorInput.min.js.map
+├── 203c76283fbcfb2fb22ecd159de71d50
+│   ├── PluginStoreOauthCallback.js
+│   ├── PluginStoreOauthCallback.min.js
+│   ├── PluginStoreOauthCallback.min.js.map
+│   ├── images
+│   │   ├── error.png
+│   │   ├── error_2x.png
+│   │   ├── success.png
+│   │   └── success_2x.png
+│   ├── parseFragmentString.js
+│   ├── parseFragmentString.min.js
+│   ├── parseFragmentString.min.js.map
+│   ├── pluginstore-oauth-callback.css
+│   ├── pluginstore-oauth-callback.css.map
+│   └── pluginstore-oauth-callback.scss
+├── 23e5f95a6054b53bf660c9fd3949db6a
+│   ├── UpdatesUtility.js
+│   ├── UpdatesUtility.min.js
+│   ├── UpdatesUtility.min.js.map
+│   ├── images
+│   │   ├── error.png
+│   │   ├── error_2x.png
+│   │   ├── success.png
+│   │   └── success_2x.png
+│   ├── updates.css
+│   ├── updates.css.map
+│   └── updates.scss
+├── 23fb95b0daa1e7ac1ca0a2a74af1d8c1
+│   ├── punycode.js
+│   └── punycode.js.map
+├── 2c562b949e44a7f76ea82cc1abcc3198
+│   ├── element-resize-detector.js
+│   └── element-resize-detector.js.map
+├── 31313c1b085504d60efe27c39e0e45ab
+│   ├── system_messages.css
+│   ├── system_messages.css.map
+│   ├── system_messages.js
+│   ├── system_messages.min.js
+│   ├── system_messages.min.js.map
+│   └── system_messages.scss
+├── 39ec2ef9979d796cde790c86b8028515
+│   ├── deprecator.css
+│   ├── deprecator.css.map
+│   ├── deprecator.js
+│   ├── deprecator.min.js
+│   ├── deprecator.min.js.map
+│   ├── deprecator.scss
+│   └── images
+│       ├── spinner_big.gif
+│       └── spinner_big_2x.gif
+├── 3a09efcbeb65f6674b09d37e05036a24
+│   ├── images
+│   │   ├── install-bg-1920.png
+│   │   ├── install-bg-5120.png
+│   │   ├── install_bg.jpg
+│   │   ├── spinner_submit.gif
+│   │   └── spinner_submit_2x.gif
+│   ├── install.css
+│   ├── install.css.map
+│   ├── install.js
+│   ├── install.min.js
+│   ├── install.min.js.map
+│   └── install.scss
+├── 3d9ca2fa1b39f3aea9a0a85d1e1dea15
+│   ├── d3.js
+│   └── d3.js.map
+├── 41b4cfef174d4b52dae013468b877ce6
+│   ├── QuickPostWidget.js
+│   ├── QuickPostWidget.min.js
+│   └── QuickPostWidget.min.js.map
+├── 4beec23f11efd0c0aae267072109951f
+│   ├── jquery.inputmask.bundle.js
+│   └── jquery.inputmask.bundle.js.map
+├── 53d3a544466cba29223631a523227524
+│   ├── xregexp-all.js
+│   └── xregexp-all.js.map
+├── 56f51353c69df1b5b6cb08df177e089d
+│   ├── category.css
+│   ├── category.css.map
+│   └── category.scss
+├── 57971e14e029f33f73a9c2031ac439de
+│   ├── Updater.js
+│   ├── Updater.min.js
+│   ├── Updater.min.js.map
+│   ├── images
+│   │   ├── error.png
+│   │   ├── error_2x.png
+│   │   ├── success.png
+│   │   └── success_2x.png
+│   ├── update.css
+│   ├── update.css.map
+│   └── update.scss
+├── 5c43cc28dec8fc9eb78b35c70b5c5d54
+│   ├── CraftSupportWidget.css
+│   ├── CraftSupportWidget.css.map
+│   ├── CraftSupportWidget.js
+│   ├── CraftSupportWidget.min.js
+│   ├── CraftSupportWidget.min.js.map
+│   └── CraftSupportWidget.scss
+├── 5eba0c1d5b1eaf2110afb70d190afa1b
+│   ├── jquery.mobile-events.js
+│   └── jquery.mobile-events.min.js
+├── 63844fae65e0a1a7a8e686fe297b5423
+│   └── tests.js
+├── 6627bb4249c0b6f52a350fc5dd798aef
+│   ├── css
+│   │   ├── main.css
+│   │   └── main.css.map
+│   ├── images
+│   │   ├── craft.svg
+│   │   ├── error.png
+│   │   ├── error_2x.png
+│   │   ├── success.png
+│   │   └── success_2x.png
+│   └── js
+│       ├── main.min.js
+│       └── main.min.js.map
+├── 694a9e5b17e03a94b90a9cb1b90483cc
+│   ├── jquery.timepicker.js
+│   └── jquery.timepicker.js.map
+├── 6d4143c76dc94342fad7d7d5c37033e0
+│   ├── css
+│   │   └── ImageOptimize.css
+│   ├── img
+│   │   └── ImageOptimize-icon.svg
+│   └── js
+│       └── ImageOptimize.js
+├── 6fc4312be29dd1d73933d2d682b93f77
+│   ├── selectize.css
+│   ├── selectize.js
+│   └── selectize.js.map
+├── 7255d41324f08c5f663ae43547f37d9f
+│   ├── UserPermissions.js
+│   ├── UserPermissions.min.js
+│   ├── UserPermissions.min.js.map
+│   ├── user-permissions.css
+│   ├── user-permissions.css.map
+│   └── user-permissions.scss
+├── 7967c4841d93ce5d4aceaa27f44bf3d4
+│   ├── images
+│   │   ├── route-bg.png
+│   │   ├── route-bg_2x.png
+│   │   ├── route-bg_rtl.png
+│   │   └── route-bg_rtl_2x.png
+│   ├── routes.css
+│   ├── routes.css.map
+│   ├── routes.js
+│   ├── routes.min.js
+│   ├── routes.min.js.map
+│   └── routes.scss
+├── 7b3075da6841d245ba0ce4e25b368d5c
+│   ├── FindAndReplaceUtility.js
+│   ├── FindAndReplaceUtility.min.js
+│   └── FindAndReplaceUtility.min.js.map
+├── 7cd4ebd4d056c086bc7ee02a64a48907
+│   ├── jquery.pjax.js
+│   └── jquery.pjax.js.map
+├── 7e299c88d0318f11dc3b78f51f09c1b3
+│   ├── fields.js
+│   ├── fields.min.js
+│   └── fields.min.js.map
+├── 88f2ad57c5d88fe31aca1112a6d421fa
+│   ├── css
+│   │   └── OptimizedImages.css
+│   ├── img
+│   │   └── OptimizedImages-icon.svg
+│   └── js
+│       └── OptimizedImages.js
+├── 8d8cf5b3e5142ad6519c0f8ad6cd986f
+│   ├── picturefill.js
+│   └── picturefill.js.map
+├── 940b98b58827379e0dcd47e5bb44ab78
+│   ├── velocity.js
+│   └── velocity.js.map
+├── 96df9aca57ca43433a95a7f85073d536
+│   ├── garnish.js
+│   └── garnish.js.map
+├── 98d6879f6ddb1f293fa62e1733a74342
+│   ├── jquery-ui.js
+│   └── jquery-ui.min.js
+├── 9a50c6cee91fe190336090da763aa3a0
+│   ├── login.css
+│   ├── login.css.map
+│   ├── login.js
+│   ├── login.min.js
+│   ├── login.min.js.map
+│   └── login.scss
+├── a1c7a63b99828127ef72d52385eaca1a
+│   ├── AccountSettingsForm.js
+│   ├── AccountSettingsForm.min.js
+│   ├── AccountSettingsForm.min.js.map
+│   ├── account.css
+│   ├── account.css.map
+│   ├── account.scss
+│   ├── profile.css
+│   ├── profile.css.map
+│   ├── profile.js
+│   ├── profile.min.js
+│   ├── profile.min.js.map
+│   └── profile.scss
+├── a8b4d0facc70b6e8730ca93e57c70aae
+│   ├── DbBackupUtility.js
+│   ├── DbBackupUtility.min.js
+│   └── DbBackupUtility.min.js.map
+├── a8bc7f67c3bfb1865c1887e82a3afd5f
+│   ├── UpdatesWidget.js
+│   ├── UpdatesWidget.min.js
+│   └── UpdatesWidget.min.js.map
+├── ab87331f09a16b04e81ad3c4874c3e76
+│   ├── jquery.fileupload.js
+│   └── jquery.ui.widget.js
+├── af17db4ab6bc8fddb373542e734d3613
+│   ├── jquery.payment.js
+│   └── jquery.payment.js.map
+├── afe59d92cb02ae3399bd4e2867b5fcd5
+│   ├── MatrixInput.js
+│   ├── MatrixInput.min.js
+│   └── MatrixInput.min.js.map
+├── b02637c2b324c26bcdeb4cde7813b549
+│   ├── qunit-2.1.1.css
+│   └── qunit-2.1.1.js
+├── b465019f1c768a2c2d5fac32547d05af
+│   ├── images
+│   │   ├── crop.jpg
+│   │   ├── crop_2x.jpg
+│   │   ├── fit.jpg
+│   │   ├── fit_2x.jpg
+│   │   ├── stretch.jpg
+│   │   └── stretch_2x.jpg
+│   ├── transforms.css
+│   ├── transforms.css.map
+│   └── transforms.scss
+├── b5c94b5a6c1901860815860be92cb765
+│   ├── PositionSelectInput.js
+│   ├── PositionSelectInput.min.js
+│   └── PositionSelectInput.min.js.map
+├── b6f414242d2b8ce56e9dda14df4bbf57
+│   ├── fabric.js
+│   └── fabric.js.map
+├── b893e50076ca75fed27aa6dfa11d66be
+│   ├── Dashboard.js
+│   ├── Dashboard.min.js
+│   ├── Dashboard.min.js.map
+│   ├── dashboard.css
+│   ├── dashboard.css.map
+│   └── dashboard.scss
+├── bc686a9e236d3c5f164844166cd78cdb
+│   ├── FeedWidget.js
+│   ├── FeedWidget.min.js
+│   └── FeedWidget.min.js.map
+├── bd734165ea8bb6d2765052612dbffa87
+│   ├── css
+│   │   ├── bootstrap-theme.css
+│   │   ├── bootstrap-theme.css.map
+│   │   ├── bootstrap-theme.min.css
+│   │   ├── bootstrap-theme.min.css.map
+│   │   ├── bootstrap.css
+│   │   ├── bootstrap.css.map
+│   │   ├── bootstrap.min.css
+│   │   └── bootstrap.min.css.map
+│   ├── fonts
+│   │   ├── glyphicons-halflings-regular.eot
+│   │   ├── glyphicons-halflings-regular.svg
+│   │   ├── glyphicons-halflings-regular.ttf
+│   │   ├── glyphicons-halflings-regular.woff
+│   │   └── glyphicons-halflings-regular.woff2
+│   └── js
+│       ├── bootstrap.js
+│       └── bootstrap.js.map
+├── c203a3dca44e5e1a135d199204456158
+│   ├── RecentEntriesWidget.js
+│   ├── RecentEntriesWidget.min.js
+│   └── RecentEntriesWidget.min.js.map
+├── c94c58e05e60a37e9083661f5f889512
+│   ├── NewUsersWidget.js
+│   ├── NewUsersWidget.min.js
+│   └── NewUsersWidget.min.js.map
+├── cfcdb31312548409d8e2568bfaeeb158
+│   ├── axios
+│   │   ├── axios.js
+│   │   └── axios.js.map
+│   ├── bootstrap
+│   │   ├── css
+│   │   │   ├── bootstrap-theme.css
+│   │   │   ├── bootstrap-theme.css.map
+│   │   │   ├── bootstrap-theme.min.css
+│   │   │   ├── bootstrap-theme.min.css.map
+│   │   │   ├── bootstrap.css
+│   │   │   ├── bootstrap.css.map
+│   │   │   ├── bootstrap.min.css
+│   │   │   └── bootstrap.min.css.map
+│   │   ├── fonts
+│   │   │   ├── glyphicons-halflings-regular.eot
+│   │   │   ├── glyphicons-halflings-regular.svg
+│   │   │   ├── glyphicons-halflings-regular.ttf
+│   │   │   ├── glyphicons-halflings-regular.woff
+│   │   │   └── glyphicons-halflings-regular.woff2
+│   │   └── js
+│   │       ├── bootstrap.js
+│   │       └── bootstrap.js.map
+│   ├── craftcms-sass
+│   │   └── _mixins.scss
+│   ├── d3
+│   │   ├── d3.js
+│   │   └── d3.js.map
+│   ├── d3-format
+│   │   ├── ar-001.json
+│   │   ├── ar-AE.json
+│   │   ├── ar-BH.json
+│   │   ├── ar-DJ.json
+│   │   ├── ar-DZ.json
+│   │   ├── ar-EG.json
+│   │   ├── ar-EH.json
+│   │   ├── ar-ER.json
+│   │   ├── ar-IL.json
+│   │   ├── ar-IQ.json
+│   │   ├── ar-JO.json
+│   │   ├── ar-KM.json
+│   │   ├── ar-KW.json
+│   │   ├── ar-LB.json
+│   │   ├── ar-LY.json
+│   │   ├── ar-MA.json
+│   │   ├── ar-MR.json
+│   │   ├── ar-OM.json
+│   │   ├── ar-PS.json
+│   │   ├── ar-QA.json
+│   │   ├── ar-SA.json
+│   │   ├── ar-SD.json
+│   │   ├── ar-SO.json
+│   │   ├── ar-SS.json
+│   │   ├── ar-SY.json
+│   │   ├── ar-TD.json
+│   │   ├── ar-TN.json
+│   │   ├── ar-YE.json
+│   │   ├── ca-ES.json
+│   │   ├── cs-CZ.json
+│   │   ├── de-CH.json
+│   │   ├── de-DE.json
+│   │   ├── en-CA.json
+│   │   ├── en-GB.json
+│   │   ├── en-IN.json
+│   │   ├── en-US.json
+│   │   ├── es-ES.json
+│   │   ├── es-MX.json
+│   │   ├── fi-FI.json
+│   │   ├── fr-CA.json
+│   │   ├── fr-FR.json
+│   │   ├── he-IL.json
+│   │   ├── hu-HU.json
+│   │   ├── it-IT.json
+│   │   ├── ja-JP.json
+│   │   ├── ko-KR.json
+│   │   ├── mk-MK.json
+│   │   ├── nl-NL.json
+│   │   ├── pl-PL.json
+│   │   ├── pt-BR.json
+│   │   ├── ru-RU.json
+│   │   ├── sv-SE.json
+│   │   ├── uk-UA.json
+│   │   └── zh-CN.json
+│   ├── d3-time-format
+│   │   ├── ca-ES.json
+│   │   ├── cs-CZ.json
+│   │   ├── da-DK.json
+│   │   ├── de-CH.json
+│   │   ├── de-DE.json
+│   │   ├── en-CA.json
+│   │   ├── en-GB.json
+│   │   ├── en-US.json
+│   │   ├── es-ES.json
+│   │   ├── es-MX.json
+│   │   ├── fi-FI.json
+│   │   ├── fr-CA.json
+│   │   ├── fr-FR.json
+│   │   ├── he-IL.json
+│   │   ├── hu-HU.json
+│   │   ├── it-IT.json
+│   │   ├── ja-JP.json
+│   │   ├── ko-KR.json
+│   │   ├── mk-MK.json
+│   │   ├── nl-NL.json
+│   │   ├── pl-PL.json
+│   │   ├── pt-BR.json
+│   │   ├── ru-RU.json
+│   │   ├── sv-SE.json
+│   │   ├── tr-TR.json
+│   │   ├── uk-UA.json
+│   │   └── zh-CN.json
+│   ├── datepicker-i18n
+│   │   ├── datepicker-ar.js
+│   │   ├── datepicker-cs.js
+│   │   ├── datepicker-da.js
+│   │   ├── datepicker-de.js
+│   │   ├── datepicker-en-GB.js
+│   │   ├── datepicker-es.js
+│   │   ├── datepicker-fr-CA.js
+│   │   ├── datepicker-fr.js
+│   │   ├── datepicker-he.js
+│   │   ├── datepicker-hu.js
+│   │   ├── datepicker-it.js
+│   │   ├── datepicker-ja.js
+│   │   ├── datepicker-ko.js
+│   │   ├── datepicker-nb.js
+│   │   ├── datepicker-nl.js
+│   │   ├── datepicker-nn.js
+│   │   ├── datepicker-no.js
+│   │   ├── datepicker-pl.js
+│   │   ├── datepicker-pt.js
+│   │   ├── datepicker-ru.js
+│   │   ├── datepicker-sk.js
+│   │   ├── datepicker-sv.js
+│   │   ├── datepicker-tr.js
+│   │   ├── datepicker-zh-CN.js
+│   │   └── datepicker-zh.js
+│   ├── element-resize-detector
+│   │   ├── element-resize-detector.js
+│   │   └── element-resize-detector.js.map
+│   ├── fabric
+│   │   ├── fabric.js
+│   │   └── fabric.js.map
+│   ├── fileupload
+│   │   ├── jquery.fileupload.js
+│   │   └── jquery.ui.widget.js
+│   ├── garnishjs
+│   │   ├── garnish.js
+│   │   └── garnish.js.map
+│   ├── inputmask
+│   │   ├── jquery.inputmask.bundle.js
+│   │   └── jquery.inputmask.bundle.js.map
+│   ├── jquery
+│   │   ├── jquery.js
+│   │   └── jquery.js.map
+│   ├── jquery-touch-events
+│   │   ├── jquery.mobile-events.js
+│   │   └── jquery.mobile-events.min.js
+│   ├── jquery-ui
+│   │   ├── jquery-ui.js
+│   │   └── jquery-ui.min.js
+│   ├── jquery.payment
+│   │   ├── jquery.payment.js
+│   │   └── jquery.payment.js.map
+│   ├── picturefill
+│   │   ├── picturefill.js
+│   │   └── picturefill.js.map
+│   ├── punycode
+│   │   ├── punycode.js
+│   │   └── punycode.js.map
+│   ├── qunit
+│   │   ├── qunit-2.1.1.css
+│   │   └── qunit-2.1.1.js
+│   ├── selectize
+│   │   ├── selectize.css
+│   │   ├── selectize.js
+│   │   └── selectize.js.map
+│   ├── timepicker
+│   │   ├── jquery.timepicker.js
+│   │   └── jquery.timepicker.js.map
+│   ├── velocity
+│   │   ├── velocity.js
+│   │   └── velocity.js.map
+│   ├── vue
+│   │   ├── vue.js
+│   │   ├── vue.js.map
+│   │   ├── vue.min.js
+│   │   └── vue.min.js.map
+│   ├── vue-router
+│   │   ├── vue-router.js
+│   │   └── vue-router.js.map
+│   ├── vuex
+│   │   ├── vuex.js
+│   │   └── vuex.js.map
+│   ├── xregexp
+│   │   ├── xregexp-all.js
+│   │   └── xregexp-all.js.map
+│   └── yii2-pjax
+│       ├── jquery.pjax.js
+│       └── jquery.pjax.js.map
+├── d45af48545f8abdae1f08e68606f461d
+│   ├── yii.activeForm.js
+│   ├── yii.captcha.js
+│   ├── yii.gridView.js
+│   ├── yii.js
+│   └── yii.validation.js
+├── d934a3eeb0d03037eeb240697847d665
+│   ├── SearchIndexesUtility.js
+│   ├── SearchIndexesUtility.min.js
+│   └── SearchIndexesUtility.min.js.map
+├── e844f71dec344d2082e74964486e5e2e
+│   ├── sites.js
+│   ├── sites.min.js
+│   └── sites.min.js.map
+├── edc46ea0edfc2d163b85d4e145374b1e
+│   ├── plugins.css
+│   ├── plugins.css.map
+│   └── plugins.scss
+├── f1af036d0314483d936a1ae0cd25e614
+│   ├── arrow.svg
+│   ├── main.css
+│   ├── maximize.svg
+│   ├── switch.svg
+│   ├── timeline.css
+│   ├── timeline.js
+│   ├── toolbar.css
+│   ├── toolbar.js
+│   └── userswitch.js
+├── f3d68a1b74ef1a6133bc59d0e4d8b87c
+│   ├── css
+│   │   ├── _cp.scss
+│   │   ├── _fld.scss
+│   │   ├── _image_editor.scss
+│   │   ├── _main.scss
+│   │   ├── _reset.scss
+│   │   ├── charts.css
+│   │   ├── charts.css.map
+│   │   ├── charts.scss
+│   │   ├── craft.css
+│   │   ├── craft.css.map
+│   │   └── craft.scss
+│   ├── fonts
+│   │   ├── Craft.svg
+│   │   ├── Craft.ttf
+│   │   └── Craft.woff
+│   ├── images
+│   │   ├── branch.png
+│   │   ├── branch_2x.png
+│   │   ├── branch_rtl.png
+│   │   ├── branch_rtl_2x.png
+│   │   ├── checkers.png
+│   │   ├── checkers.svg
+│   │   ├── checkers_2x.png
+│   │   ├── craft.png
+│   │   ├── craft_2x.png
+│   │   ├── craftcms.svg
+│   │   ├── craftid.svg
+│   │   ├── dev-mode.svg
+│   │   ├── fieldlayoutform-bg.png
+│   │   ├── fieldlayoutform-bg_2x.png
+│   │   ├── hudtip_bottom.png
+│   │   ├── hudtip_bottom_2x.png
+│   │   ├── hudtip_bottom_gray.png
+│   │   ├── hudtip_bottom_gray_2x.png
+│   │   ├── hudtip_left.png
+│   │   ├── hudtip_left_2x.png
+│   │   ├── hudtip_right.png
+│   │   ├── hudtip_right_2x.png
+│   │   ├── hudtip_top.png
+│   │   ├── hudtip_top_2x.png
+│   │   ├── image-editor
+│   │   │   ├── crop.svg
+│   │   │   ├── filters.svg
+│   │   │   ├── flip-horizontal.svg
+│   │   │   ├── flip-vertical.svg
+│   │   │   ├── focal-point.svg
+│   │   │   ├── rotate-left.svg
+│   │   │   ├── rotate-right.svg
+│   │   │   └── unconstrained.svg
+│   │   ├── listview_sort.png
+│   │   ├── listview_sort_2x.png
+│   │   ├── prg.jpg
+│   │   ├── progressbar_pending.png
+│   │   ├── progressbar_pending_2x.png
+│   │   ├── resizehandle.png
+│   │   ├── resizehandle_2x.png
+│   │   ├── resizehandle_rtl.png
+│   │   ├── resizehandle_rtl_2x.png
+│   │   ├── spinner.gif
+│   │   ├── spinner_2x.gif
+│   │   ├── spinner_big.gif
+│   │   ├── spinner_big_2x.gif
+│   │   ├── spinner_details.gif
+│   │   ├── spinner_details_2x.gif
+│   │   ├── spinner_element.gif
+│   │   ├── spinner_element_2x.gif
+│   │   ├── spinner_submit.gif
+│   │   ├── spinner_submit_2x.gif
+│   │   ├── spinner_submit_secondary.gif
+│   │   ├── spinner_submit_secondary_2x.gif
+│   │   ├── spinner_tableheader.gif
+│   │   ├── spinner_tableheader_2x.gif
+│   │   ├── spinner_transform.gif
+│   │   ├── success.png
+│   │   ├── success_2x.png
+│   │   ├── temp_folder.png
+│   │   ├── touch-icons
+│   │   │   ├── ipad-pro_2x.png
+│   │   │   ├── ipad_1x.png
+│   │   │   ├── ipad_2x.png
+│   │   │   ├── iphone_2x.png
+│   │   │   └── iphone_3x.png
+│   │   ├── user.svg
+│   │   ├── welcome_logo.png
+│   │   ├── welcome_logo_2x.png
+│   │   └── whats-new
+│   │       ├── customized-entry-index.png
+│   │       ├── inline-entry-creation.png
+│   │       └── new-dashboard.png
+│   └── js
+│       ├── Craft.js
+│       ├── Craft.min.js
+│       └── Craft.min.js.map
+├── f5e20948d26a39c571395a67326d6d51
+│   ├── TableFieldSettings.js
+│   ├── TableFieldSettings.min.js
+│   └── TableFieldSettings.min.js.map
+└── ff6d2f917d6c425961b1a40898a40d98
+    ├── whats-new.css
+    ├── whats-new.css.map
+    └── whats-new.scss

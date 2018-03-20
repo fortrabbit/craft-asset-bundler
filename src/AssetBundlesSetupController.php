@@ -76,7 +76,7 @@ class AssetBundlesSetupController extends SetupController
     {
         // Make 'web' aliases available in console
         Craft::setAlias('@webroot', CRAFT_BASE_PATH . '/web');
-        Craft::setAlias('@web', '');
+        Craft::setAlias('@web', '/');
 
         // Override where Yii should find its asset deps
         $libPath = Craft::getAlias('@lib');
