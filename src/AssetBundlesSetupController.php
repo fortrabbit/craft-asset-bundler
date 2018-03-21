@@ -3,9 +3,11 @@
 use Craft;
 use craft\console\controllers\SetupController;
 use craft\helpers\FileHelper;
+use craft\web\twig\variables\Rebrand;
 use craft\web\View;
 use Symfony\Component\Process\Exception\RuntimeException as ProcessRuntimeException;
 use Symfony\Component\Process\Process;
+use yii\base\Exception;
 use yii\base\InvalidArgumentException;
 
 /**
@@ -24,6 +26,9 @@ class AssetBundlesSetupController extends SetupController
 
         // Make @webroot/cpresources) exist
         $this->createBasePath();
+
+        // Rebrand logo + icon
+        $this->publishRebrand();
 
         // Register aliases for disabled plugins as well
         foreach (\Craft::$app->getPlugins()->getAllPluginInfo() as $plugin) {
@@ -94,6 +99,17 @@ class AssetBundlesSetupController extends SetupController
             if (FileHelper::createDirectory($basePath)) {
                 echo PHP_EOL . $basePath . ' created' . PHP_EOL;
             }
+        }
+    }
+
+    protected function publishRebrand()
+    {
+        try {
+            $rebrand = new Rebrand();
+            $rebrand->getIcon();
+            $rebrand->getLogo();
+        } catch (Exception $e) {
+            // silence
         }
     }
 }
