@@ -14,7 +14,6 @@ namespace fortrabbit\AssetBundler;
 use Craft;
 use craft\base\Plugin as BasePlugin;
 use craft\console\Application as ConsoleApplication;
-use Ottosmops\Md5sum\Md5sum;
 
 
 /**

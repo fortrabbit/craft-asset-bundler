@@ -4,10 +4,6 @@ use Craft;
 use craft\console\controllers\SetupController;
 use craft\helpers\FileHelper;
 use craft\web\twig\variables\Rebrand;
-use craft\web\View;
-use Ottosmops\Md5sum\Md5sum;
-use Symfony\Component\Process\Exception\RuntimeException as ProcessRuntimeException;
-use Symfony\Component\Process\Process;
 use yii\base\Exception;
 use yii\base\InvalidArgumentException;
 
