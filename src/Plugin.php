@@ -14,6 +14,7 @@ namespace fortrabbit\AssetBundler;
 use Craft;
 use craft\base\Plugin as BasePlugin;
 use craft\console\Application as ConsoleApplication;
+use Ottosmops\Md5sum\Md5sum;
 
 
 /**
@@ -65,18 +66,17 @@ class Plugin extends BasePlugin
         Craft::$app->set('assetManager', function () {
             $generalConfig = Craft::$app->getConfig()->getGeneral();
             $config        = [
-                'class'           => \craft\web\AssetManager::class,
+                'class'           => ResourceAssetManager::class,
                 'basePath'        => $generalConfig->resourceBasePath,
                 'baseUrl'         => $generalConfig->resourceBaseUrl,
                 'fileMode'        => $generalConfig->defaultFileMode,
                 'dirMode'         => $generalConfig->defaultDirMode,
-                'appendTimestamp' => true,
-                'hashCallback'    => function ($path) {
-                    return hash('md4', $path);
-                }
+                'appendTimestamp' => false,
             ];
 
             return Craft::createObject($config);
         });
+
     }
+
 }

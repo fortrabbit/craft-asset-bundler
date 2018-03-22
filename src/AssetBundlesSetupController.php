@@ -5,6 +5,7 @@ use craft\console\controllers\SetupController;
 use craft\helpers\FileHelper;
 use craft\web\twig\variables\Rebrand;
 use craft\web\View;
+use Ottosmops\Md5sum\Md5sum;
 use Symfony\Component\Process\Exception\RuntimeException as ProcessRuntimeException;
 use Symfony\Component\Process\Process;
 use yii\base\Exception;
@@ -29,6 +30,10 @@ class AssetBundlesSetupController extends SetupController
 
         // Rebrand logo + icon
         $this->publishRebrand();
+
+        /** @var ResourceAssetManager $am */
+        $am = \Craft::$app->getAssetManager();
+        //$am->forceCopy = true;
 
         // Register aliases for disabled plugins as well
         foreach (\Craft::$app->getPlugins()->getAllPluginInfo() as $plugin) {
@@ -72,7 +77,21 @@ class AssetBundlesSetupController extends SetupController
             }
         }
 
-        return (count(\Craft::$app->getView()->assetBundles)) ? 0 : 1;
+        // No bundles, must be something wrong
+        if (count(\Craft::$app->getView()->assetBundles) === 0) {
+            return false;
+        }
+
+        $am->updateRevision();
+
+        if ($am->modifiedFiles) {
+
+            echo 'Modified files - new Revision: ' . $am->revision . PHP_EOL;
+            echo '-------------------------------------------' . PHP_EOL;
+            foreach ($am->modifiedFiles as $file) {
+                echo $file . PHP_EOL;
+            }
+        }
 
     }
 
@@ -80,6 +99,7 @@ class AssetBundlesSetupController extends SetupController
     protected function adjustAliases()
     {
         // Make 'web' aliases available in console
+        // Pre RC16
         Craft::setAlias('@webroot', CRAFT_BASE_PATH . '/web');
         Craft::setAlias('@web', '/');
 

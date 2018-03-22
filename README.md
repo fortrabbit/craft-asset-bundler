@@ -25,7 +25,11 @@ When `composer install` is part of your deployment process anyways, you can incl
 
 # How it works
 
-All `AssetBundle` classes that exist in the composer autoload class map get registered.
+* All `AssetBundle` classes that exist in the composer autoload class map get registered.
+* In a `/web/cpresources.rev` file the timestamp of the latest revision is stored
+* Files are located in `web/cpresources/{revision}/{hash}/file.ext`
+* `{revision}` only changes if file is modified 
+
 
 # Edge cases
 

@@ -2,7 +2,7 @@
     "name": "fortrabbit/craft-asset-bundler",
     "description": "Provides a console command to publish web/cpresources",
     "type": "craft-plugin",
-    "version": "0.1.0",
+    "version": "0.3.0",
     "keywords": [
         "craft",
         "cms",
@@ -23,7 +23,8 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0-RC1"
+        "craftcms/cms": "^3.0.0-RC1",
+        "ottosmops/md5sum": "^1.0"
     },
     "autoload": {
         "psr-4": {
