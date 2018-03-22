@@ -11,14 +11,14 @@ However, in load balanced environments, it happens that files do not exist on al
 
 Use this command in your build process before you distribute your code to all servers:
 ```
-php craft setup/asset-bundles
+php craft asset-bundler/publish
 ```
 
 When `composer install` is part of your deployment process anyways, you can include the command in your composer.json to run it automatically:
 ```
 "scripts": {    
     "post-install-cmd": [
-      "@php craft setup/asset-bundles"
+      "@php craft asset-bundler/publish"
     ]
   }
 ```
