@@ -2,7 +2,7 @@
     "name": "fortrabbit/craft-asset-bundler",
     "description": "Provides a console command to publish web/cpresources",
     "type": "craft-plugin",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "keywords": [
         "craft",
         "cms",

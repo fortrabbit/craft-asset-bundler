@@ -49,6 +49,9 @@ class RevisionableResourceBehavior extends Behavior
     }
 
 
+    /**
+     * @return bool
+     */
     public function updateRevision()
     {
         // No revision folder?

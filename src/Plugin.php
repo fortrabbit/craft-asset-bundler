@@ -14,6 +14,10 @@ namespace fortrabbit\AssetBundler;
 use Craft;
 use craft\base\Plugin as BasePlugin;
 use craft\console\Application as ConsoleApplication;
+use craft\events\AssetThumbEvent;
+use craft\events\GetAssetThumbUrlEvent;
+use craft\services\Assets;
+use yii\base\Event;
 
 
 /**

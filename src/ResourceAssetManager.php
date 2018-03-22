@@ -22,6 +22,15 @@ use craft\web\AssetManager;
  */
 class ResourceAssetManager extends AssetManager
 {
+    protected $assetThumbsPath;
+
+    public function __construct(array $config = [])
+    {
+        parent::__construct($config);
+
+        $this->assetThumbsPath = \Craft::$app->getPath()->getAssetThumbsPath();
+    }
+
     public function behaviors()
     {
         return ['RevisionableResource' => RevisionableResourceBehavior::class];
@@ -34,6 +43,14 @@ class ResourceAssetManager extends AssetManager
      */
     protected function hash($path)
     {
+        // don't hash thumb path
+        if (stristr($path, $this->assetThumbsPath)) {
+            $this->basePath = 't';
+            $this->baseUrl  = '/t';
+            $this->appendTimestamp = true;
+            return $this->extractAssetId($path);
+        }
+
         $revision = $this->getRevision();
 
         return $revision . DIRECTORY_SEPARATOR . sprintf('%x', crc32($path));
@@ -60,13 +77,26 @@ class ResourceAssetManager extends AssetManager
             if ($fileinfo->isFile()) {
                 $mtime = $fileinfo->getMTime();
                 if ($mtime > $this->revision) {
-                    //return parent::publishDirectory($src, );
-                    parent::publishFile($fileinfo->getPathname());
+                    return parent::publishDirectory($src, ['forceCopy' => true]);
                 }
             }
         }
 
         return parent::publishDirectory($src, $options);
 
+    }
+
+    /**
+     * @param string $path
+     *
+     * @return mixed
+     */
+    protected function extractAssetId(string $path)
+    {
+        $pos   = (is_file($path)) ? 2 : 1;
+        $parts = explode(DIRECTORY_SEPARATOR, $path);
+        $id    = $parts[count($parts) - $pos];
+
+        return $id;
     }
 }

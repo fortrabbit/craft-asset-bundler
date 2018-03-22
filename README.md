@@ -41,6 +41,5 @@ As the plugin is not aware of these files, you may need to add them to a bundle.
 
 * Config option to include additional classes
 * Config option to exclude classes form class map 
-* Config option for alternative `hashCallback`
 
 

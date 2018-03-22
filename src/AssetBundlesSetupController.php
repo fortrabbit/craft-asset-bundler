@@ -27,10 +27,6 @@ class AssetBundlesSetupController extends SetupController
         // Rebrand logo + icon
         $this->publishRebrand();
 
-        /** @var ResourceAssetManager $am */
-        $am = \Craft::$app->getAssetManager();
-        //$am->forceCopy = true;
-
         // Register aliases for disabled plugins as well
         foreach (\Craft::$app->getPlugins()->getAllPluginInfo() as $plugin) {
             if (!$plugin['isEnabled']) {
@@ -78,16 +74,14 @@ class AssetBundlesSetupController extends SetupController
             return false;
         }
 
+        /** @var ResourceAssetManager $am */
+        $am = \Craft::$app->getAssetManager();
+
+        $oldRev = $am->getRevision();
         $am->updateRevision();
+        $newRev = $am->getRevision();
+        $this->printModifiedFiles($am->modifiedFiles, $oldRev, $newRev);
 
-        if ($am->modifiedFiles) {
-
-            echo 'Modified files - new Revision: ' . $am->revision . PHP_EOL;
-            echo '-------------------------------------------' . PHP_EOL;
-            foreach ($am->modifiedFiles as $file) {
-                echo $file . PHP_EOL;
-            }
-        }
 
     }
 
@@ -126,6 +120,18 @@ class AssetBundlesSetupController extends SetupController
             $rebrand->getLogo();
         } catch (Exception $e) {
             // silence
+        }
+    }
+
+    protected function printModifiedFiles(array $files, $oldRev = null, $newRev = null)
+    {
+        if (count($files)) {
+
+            echo "Revision change: $oldRev > $newRev" . PHP_EOL;
+            echo str_repeat('-', 50) . PHP_EOL;
+            foreach ($files as $file) {
+                echo $file . PHP_EOL;
+            }
         }
     }
 }
