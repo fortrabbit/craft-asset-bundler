@@ -1,22 +1,28 @@
-<?php namespace fortrabbit\AssetBundler;
+<?php namespace fortrabbit\AssetBundler\commands;
 
 use Craft;
-use craft\console\controllers\SetupController;
 use craft\helpers\FileHelper;
 use craft\web\twig\variables\Rebrand;
+use yii\base\Action;
 use yii\base\Exception;
 use yii\base\InvalidArgumentException;
 
+
 /**
- * Craft CMS setup installer (+ setup/asset-bundles action).
+ * Class PublishAction
+ *
+ * @package fortrabbit\AssetBundler\commands
  */
-class AssetBundlesSetupController extends SetupController
+class PublishAction extends Action
 {
 
     /**
-     * Publishes asset bundles
+     * Publish assets to cpresources
+     *
+     * @return bool
+     * @throws \ReflectionException
      */
-    public function actionAssetBundles()
+    public function run()
     {
         // Prepare for console
         $this->adjustAliases();
@@ -74,14 +80,13 @@ class AssetBundlesSetupController extends SetupController
             return false;
         }
 
-        /** @var ResourceAssetManager $am */
+        /** @var \fortrabbit\AssetBundler\ResourceAssetManager $am */
         $am = \Craft::$app->getAssetManager();
 
         $oldRev = $am->getRevision();
         $am->updateRevision();
         $newRev = $am->getRevision();
         $this->printModifiedFiles($am->modifiedFiles, $oldRev, $newRev);
-
 
     }
 
@@ -132,6 +137,9 @@ class AssetBundlesSetupController extends SetupController
             foreach ($files as $file) {
                 echo $file . PHP_EOL;
             }
+        } else {
+            echo "No files changes" . PHP_EOL;
         }
     }
 }
+

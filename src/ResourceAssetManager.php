@@ -16,9 +16,9 @@ use craft\web\AssetManager;
  *
  * @package fortrabbit\AssetBundler
  *
+ * @property $modifiedFiles
  * @method getRevision()
  * @method updateRevision()
- *
  */
 class ResourceAssetManager extends AssetManager
 {
@@ -45,9 +45,10 @@ class ResourceAssetManager extends AssetManager
     {
         // don't hash thumb path
         if (stristr($path, $this->assetThumbsPath)) {
-            $this->basePath = 't';
-            $this->baseUrl  = '/t';
+            $this->basePath        = 't';
+            $this->baseUrl         = '/t';
             $this->appendTimestamp = true;
+
             return $this->extractAssetId($path);
         }
 

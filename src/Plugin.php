@@ -10,14 +10,9 @@
 
 namespace fortrabbit\AssetBundler;
 
-
 use Craft;
 use craft\base\Plugin as BasePlugin;
 use craft\console\Application as ConsoleApplication;
-use craft\events\AssetThumbEvent;
-use craft\events\GetAssetThumbUrlEvent;
-use craft\services\Assets;
-use yii\base\Event;
 
 
 /**
@@ -50,9 +45,9 @@ class Plugin extends BasePlugin
         // AssetManager with hashCallback
         $this->registerAssetManager();
 
-        // Extend SetupController
+        // Register console commands
         if (Craft::$app instanceof ConsoleApplication) {
-            Craft::$app->controllerMap['setup'] = AssetBundlesSetupController::class;
+            Craft::$app->controllerMap['asset-bundler'] = Commands::class;
         }
 
     }
@@ -64,7 +59,8 @@ class Plugin extends BasePlugin
      *
      * @throws \yii\base\InvalidConfigException
      */
-    protected function registerAssetManager() {
+    protected function registerAssetManager()
+    {
 
         Craft::$app->set('assetManager', function () {
             $generalConfig = Craft::$app->getConfig()->getGeneral();
