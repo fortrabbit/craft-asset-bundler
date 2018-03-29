@@ -1,5 +1,9 @@
 # AssetBundler Changelog
 
+## 0.5.0 - 2018-03-30
+### Changed
+- New namespace for cli commands `craft asset-bundler/*`
+
 ## 0.4.0 - 2018-03-22
 ### Changed
 - Assets from Volumes moved out of the cpresouces folder
