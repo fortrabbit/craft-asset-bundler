@@ -8,10 +8,10 @@ However, in load balanced environments, it happens that files do not exist on al
 
 Craft also stores thumbnails of Volume Assets in `web/cpresources` to make them accessible in the control panel. The plugin changes this behaviour: 
 
-* (default pattern)  web/cpresources/{hash}/thumb-{width}x{height}.{ext}?v={modified_date}
-* (modified pattern) web/t/{asset_id}/thumb-{width}x{height}.{ext}?v={modified_date}
+* (default pattern)  `web/cpresources/{hash}/thumb-{width}x{height}.{ext}?v={modified_date}`
+* (modified pattern) `web/t/{asset_id}/thumb-{width}x{height}.{ext}?v={modified_date}`
 
-This way we can create thumbnails on-the-fly if they don't exist on a certain server. (TODO)
+This way we can create thumbnails on-the-fly if they don't exist on a certain server.
 
 
 # Usage
