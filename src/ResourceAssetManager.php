@@ -43,10 +43,11 @@ class ResourceAssetManager extends AssetManager
      */
     protected function hash($path)
     {
-        // don't hash thumb path
+        // Don't hash thumb path
         if (stristr($path, $this->assetThumbsPath)) {
-            $this->basePath        = 't';
-            $this->baseUrl         = '/t';
+
+            $this->basePath        = Plugin::THUMBS_TMP_DIR;
+            $this->baseUrl         = '/' . Plugin::THUMBS_TMP_DIR;
             $this->appendTimestamp = true;
 
             return $this->extractAssetId($path);

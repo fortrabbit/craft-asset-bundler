@@ -1,8 +1,12 @@
 # AssetBundler Changelog
 
-## 0.5.0 - 2018-03-30
+## 0.5.0 - 2018-04-10
 ### Changed
 - New namespace for cli commands `craft asset-bundler/*`
+
+### Added
+- New command `craft asset-bundler/cleanup`
+- Generate Asset Thumbs on-the-fly if they do not exist
 
 ## 0.4.0 - 2018-03-22
 ### Changed

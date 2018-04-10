@@ -8,7 +8,7 @@ use yii\console\Controller as BaseConsoleController;
 
 
 /**
- * fortrabbit AssetBundler - a tooling for assets
+ * Tooling for assets in load balanced environments
  */
 class Commands extends BaseConsoleController
 {

@@ -13,6 +13,13 @@ namespace fortrabbit\AssetBundler;
 use Craft;
 use craft\base\Plugin as BasePlugin;
 use craft\console\Application as ConsoleApplication;
+use craft\events\RegisterUrlRulesEvent;
+use craft\web\Controller;
+use craft\web\UrlManager;
+use fortrabbit\AssetBundler\controllers\AssetsController;
+use yii\base\ActionEvent;
+use yii\base\Behavior;
+use yii\base\Event;
 
 
 /**
@@ -25,6 +32,9 @@ use craft\console\Application as ConsoleApplication;
  */
 class Plugin extends BasePlugin
 {
+
+    const THUMBS_TMP_DIR = 't';
+
     /**
      * Static property that is an instance of this plugin class so that it can be accessed via
      * AssetBundler::$plugin
@@ -49,6 +59,19 @@ class Plugin extends BasePlugin
         if (Craft::$app instanceof ConsoleApplication) {
             Craft::$app->controllerMap['asset-bundler'] = Commands::class;
         }
+
+        // Register route for Asset thumbs generation
+        Event::on(
+            UrlManager::class,
+            UrlManager::EVENT_REGISTER_SITE_URL_RULES,
+            function (RegisterUrlRulesEvent $event) {
+                // /t/{asset_id}/thumb-{width}x{height}.{ext}?v={modified_date}
+                $event->rules[self::THUMBS_TMP_DIR . '/<assetId:\d+>/thumb-<width:\d+>x<height:\d+>.<ext>'] = 'asset-bundler/assets/generate-thumb';
+
+            }
+        );
+
+
 
     }
 
