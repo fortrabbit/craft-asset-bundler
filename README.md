@@ -25,6 +25,7 @@ When `composer install` is part of your deployment process anyways, you can incl
 ```
 "scripts": {    
     "post-install-cmd": [
+      "@php craft install/plugin asset-bundler",
       "@php craft asset-bundler/publish"
     ]
   }
