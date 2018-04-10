@@ -6,6 +6,13 @@ The purpose of this command is to publish AssetBundles files in a publicly acces
 This happens already on-the-fly, e.g when you access Craft's control panel in the browser the first time. 
 However, in load balanced environments, it happens that files do not exist on all servers after you deployed.
 
+Craft also stores thumbnails of Volume Assets in `web/cpresources` to make them accessible in the control panel. The plugin changes this behaviour: 
+
+* (default pattern)  web/cpresources/{hash}/thumb-{width}x{height}.{ext}?v={modified_date}
+* (modified pattern) web/t/{asset_id}/thumb-{width}x{height}.{ext}?v={modified_date}
+
+This way we can create thumbnails on-the-fly if they don't exist on a certain server. (TODO)
+
 
 # Usage
 
@@ -28,7 +35,7 @@ When `composer install` is part of your deployment process anyways, you can incl
 * All `AssetBundle` classes that exist in the composer autoload class map get registered.
 * In a `/web/cpresources.rev` file the timestamp of the latest revision is stored
 * Files are located in `web/cpresources/{revision}/{hash}/file.ext`
-* `{revision}` only changes if file is modified 
+* `{revision}` only changes if file is modified
 
 
 # Edge cases
