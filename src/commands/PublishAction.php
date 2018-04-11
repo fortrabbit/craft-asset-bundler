@@ -17,6 +17,11 @@ class PublishAction extends Action
 {
 
     /**
+     * @var bool
+     */
+    public $verbose;
+
+    /**
      * Publish assets to cpresources
      *
      * @return bool
@@ -86,7 +91,9 @@ class PublishAction extends Action
         $oldRev = $am->getRevision();
         $am->updateRevision();
         $newRev = $am->getRevision();
+
         $this->printModifiedFiles($am->modifiedFiles, $oldRev, $newRev);
+
 
     }
 
@@ -129,9 +136,13 @@ class PublishAction extends Action
 
             echo "Revision change: $oldRev > $newRev" . PHP_EOL;
             echo str_repeat('-', 50) . PHP_EOL;
-            foreach ($files as $file) {
-                echo $file . PHP_EOL;
+
+            if ($this->verbose) {
+                foreach ($files as $file) {
+                    echo $file . PHP_EOL;
+                }
             }
+
         } else {
             echo "No files changes" . PHP_EOL;
         }

@@ -15,11 +15,25 @@ class Commands extends BaseConsoleController
 
     public $defaultAction = 'publish';
 
+    public $verbose = false;
+
+    public function options($actionID)
+    {
+        return ($actionID === 'publish') ? ['verbose'] : [];
+    }
+
+    public function optionAliases()
+    {
+        return ['v' => 'verbose'];
+    }
 
     public function actions()
     {
         return [
-            'publish'   => PublishAction::class,
+            'publish' => [
+                'class' =>  PublishAction::class,
+                'verbose' => $this->verbose
+            ],
             'cleanup'   => CleanupAction::class,
         ];
     }

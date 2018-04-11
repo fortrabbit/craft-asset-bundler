@@ -1,5 +1,11 @@
 # AssetBundler Changelog
 
+## 0.6.0 - 2018-04-12
+### Changed
+- Updated dependency `craftcms/cms:^3.0.0
+- No need to set @web & @webroot alias anymore, Thanks: @timkelty                                                        
+- Added `--verbose` / `-v` option to display the list of changed files (default `false)  
+
 ## 0.5.0 - 2018-04-10
 ### Changed
 - New namespace for cli commands `craft asset-bundler/*`
