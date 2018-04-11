@@ -93,11 +93,6 @@ class PublishAction extends Action
 
     protected function adjustAliases()
     {
-        // Make 'web' aliases available in console
-        // Pre RC16
-        Craft::setAlias('@webroot', CRAFT_BASE_PATH . '/web');
-        Craft::setAlias('@web', '/');
-
         // Override where Yii should find its asset deps
         $libPath = Craft::getAlias('@lib');
         Craft::setAlias('@bower/bootstrap/dist', $libPath . '/bootstrap');
