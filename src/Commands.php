@@ -17,27 +17,32 @@ class Commands extends BaseConsoleController
 
     public $verbose = false;
 
+    public $forceRevision = 0;
+
     public function options($actionID)
     {
-        return ($actionID === 'publish') ? ['verbose'] : [];
+        return ($actionID === 'publish') ? ['verbose', 'forceRevision'] : [];
     }
 
     public function optionAliases()
     {
-        return ['v' => 'verbose'];
+        return [
+            'v' => 'verbose',
+            'r' => 'force-revision'
+        ];
     }
 
     public function actions()
     {
         return [
             'publish' => [
-                'class' =>  PublishAction::class,
-                'verbose' => $this->verbose
+                'class'         => PublishAction::class,
+                'verbose'       => $this->verbose,
+                'forceRevision' => $this->forceRevision
             ],
-            'cleanup'   => CleanupAction::class,
+            'cleanup' => CleanupAction::class,
         ];
     }
-
 
 
 }

@@ -52,7 +52,7 @@ class RevisionableResourceBehavior extends Behavior
     /**
      * @return bool
      */
-    public function updateRevision()
+    public function updateRevisionIfModified()
     {
         // No revision folder?
         if (!is_dir($this->getRevisionResourcePath())) {
@@ -80,6 +80,42 @@ class RevisionableResourceBehavior extends Behavior
 
     }
 
+
+    /**
+     * @param int $timestamp
+     *
+     * @return bool
+     */
+    public function updateRevisionTo(int $timestamp)
+    {
+        // No revision folder?
+        if (!is_dir($this->getRevisionResourcePath())) {
+            return false;
+        }
+
+        // Get current revision
+        $oldRevPath     = $this->getRevisionResourcePath();
+        $this->revision = $timestamp;
+
+        $iterator = new \RecursiveIteratorIterator(
+            new \RecursiveDirectoryIterator($oldRevPath),
+            \RecursiveIteratorIterator::CHILD_FIRST
+        );
+
+        foreach ($iterator as $fileinfo) {
+            if ($fileinfo->isFile()) {
+                $this->modifiedFiles[] = str_replace($this->getRevisionResourcePath(), '', $fileinfo->getPathname());
+            }
+        }
+
+        // Write revFile
+        $this->writeRevisionToFile($this->revision);
+
+        // Rename revision folder
+        return rename($oldRevPath, $this->getRevisionResourcePath());
+
+    }
+
     /**
      * @return string
      */
@@ -89,12 +125,15 @@ class RevisionableResourceBehavior extends Behavior
     }
 
     /**
+     * Collects modified all files and returns
+     * the most recent modification date
+     *
      * @return int
      */
     protected function getRecentModificationDate()
     {
         $recent = 0;
-        $folder   = $this->getRevisionResourcePath();
+        $folder = $this->getRevisionResourcePath();
 
         $iterator = new \RecursiveIteratorIterator(
             new \RecursiveDirectoryIterator($folder),

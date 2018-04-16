@@ -1,5 +1,9 @@
 # AssetBundler Changelog
 
+## 0.7.0 - 2018-04-16
+### Added                                                     
+- option `--force-revision` / `-r` to force a revision
+
 ## 0.6.0 - 2018-04-12
 ### Changed
 - Updated dependency `craftcms/cms:^3.0.0

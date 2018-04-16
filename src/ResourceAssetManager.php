@@ -18,7 +18,8 @@ use craft\web\AssetManager;
  *
  * @property $modifiedFiles
  * @method getRevision()
- * @method updateRevision()
+ * @method updateRevisionIfModified()
+ * @method updateRevisionTo($timestamp)
  */
 class ResourceAssetManager extends AssetManager
 {

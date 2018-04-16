@@ -6,6 +6,7 @@ use craft\web\twig\variables\Rebrand;
 use yii\base\Action;
 use yii\base\Exception;
 use yii\base\InvalidArgumentException;
+use yii\console\ExitCode;
 
 
 /**
@@ -20,6 +21,11 @@ class PublishAction extends Action
      * @var bool
      */
     public $verbose;
+
+    /**
+     * @var int Timestamp of new revision
+     */
+    public $forceRevision;
 
     /**
      * Publish assets to cpresources
@@ -86,14 +92,18 @@ class PublishAction extends Action
         }
 
         /** @var \fortrabbit\AssetBundler\ResourceAssetManager $am */
-        $am = \Craft::$app->getAssetManager();
-
+        $am     = \Craft::$app->getAssetManager();
         $oldRev = $am->getRevision();
-        $am->updateRevision();
-        $newRev = $am->getRevision();
 
-        $this->printModifiedFiles($am->modifiedFiles, $oldRev, $newRev);
+        if ($this->forceRevision) {
+            $am->updateRevisionTo($this->forceRevision);
+            $this->printModifiedFiles($am->modifiedFiles, $oldRev, $am->getRevision());
+            return ExitCode::OK;
+        }
 
+        $am->updateRevisionIfModified();
+        $this->printModifiedFiles($am->modifiedFiles, $oldRev, $am->getRevision());
+        return ExitCode::OK;
 
     }
 
