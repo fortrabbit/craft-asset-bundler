@@ -1,3 +1,12 @@
+# Deprecated since craftcms/cms: 3.0.13 (2018-06-26)
+
+The plugin is not needed anymore.
+In Craft 3.0.4 the way cpresources are published was changed. In Craft 3.0.13 another fix was released to change thumbnail delivery in the CP as well.
+
+
+
+
+
 # AssetBundler plugin for Craft CMS 3.x
 
 The plugin provides a console command to publish web/cpresources. This is useful in "cloud environments" like [fortrabbit's Professional Stack](https://www.fortrabbit.com/pricing-pro) or when using multiple Dynos on Heroku.
